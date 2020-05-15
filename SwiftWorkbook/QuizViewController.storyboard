@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FSF-qm-UgY">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Quiz View Controller-->
+        <scene sceneID="pwM-6A-hRR">
+            <objects>
+                <viewController id="FSF-qm-UgY" customClass="QuizViewController" customModule="SwiftWorkbook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fTm-zB-cOn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="eB0-r1-7k2">
+                                <rect key="frame" x="40" y="254.5" width="334" height="119"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="① String" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4GT-hb-L3h">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="29"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="② Int" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdG-Ho-4ok">
+                                        <rect key="frame" x="0.0" y="45" width="334" height="29"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="③ Bool" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHM-1P-eBp">
+                                        <rect key="frame" x="0.0" y="90" width="334" height="29"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xx3-xl-fpK">
+                                <rect key="frame" x="64" y="413.5" width="286" height="41"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                <state key="normal" title="数字を探す"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="問題1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alc-H7-dX1">
+                                <rect key="frame" x="40" y="84" width="334" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Swiftにおけるデータ型のうち、&quot;&quot;で括ることが特徴の文字を表すための型は次のうちどれでしょう。" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1nu-WV-RpQ">
+                                <rect key="frame" x="48" y="157" width="318" height="73.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="eB0-r1-7k2" firstAttribute="top" secondItem="1nu-WV-RpQ" secondAttribute="bottom" constant="24" id="26r-WK-cqg"/>
+                            <constraint firstItem="1nu-WV-RpQ" firstAttribute="leading" secondItem="Y5k-Rx-1bg" secondAttribute="leading" constant="48" id="ADc-GS-TW7"/>
+                            <constraint firstItem="xx3-xl-fpK" firstAttribute="centerX" secondItem="fTm-zB-cOn" secondAttribute="centerX" id="CRG-JX-bnB"/>
+                            <constraint firstItem="xx3-xl-fpK" firstAttribute="leading" secondItem="Y5k-Rx-1bg" secondAttribute="leading" constant="64" id="Gul-Gy-akh"/>
+                            <constraint firstItem="alc-H7-dX1" firstAttribute="top" secondItem="Y5k-Rx-1bg" secondAttribute="top" constant="40" id="JgX-cf-PZj"/>
+                            <constraint firstItem="alc-H7-dX1" firstAttribute="leading" secondItem="Y5k-Rx-1bg" secondAttribute="leading" constant="40" id="QEZ-b9-VhY"/>
+                            <constraint firstItem="eB0-r1-7k2" firstAttribute="leading" secondItem="Y5k-Rx-1bg" secondAttribute="leading" constant="40" id="VnF-ju-2vk"/>
+                            <constraint firstItem="xx3-xl-fpK" firstAttribute="top" secondItem="eB0-r1-7k2" secondAttribute="bottom" constant="40" id="age-lc-vSZ"/>
+                            <constraint firstItem="1nu-WV-RpQ" firstAttribute="centerX" secondItem="fTm-zB-cOn" secondAttribute="centerX" id="dJY-lf-UVd"/>
+                            <constraint firstItem="alc-H7-dX1" firstAttribute="centerX" secondItem="fTm-zB-cOn" secondAttribute="centerX" id="eE4-dQ-gUj"/>
+                            <constraint firstItem="1nu-WV-RpQ" firstAttribute="top" secondItem="alc-H7-dX1" secondAttribute="bottom" constant="32" id="yll-dT-Jy2"/>
+                            <constraint firstItem="eB0-r1-7k2" firstAttribute="centerX" secondItem="fTm-zB-cOn" secondAttribute="centerX" id="zg7-Ys-IDZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Y5k-Rx-1bg"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9TW-f3-VOg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="164.73214285714286"/>
+        </scene>
+    </scenes>
+</document>
