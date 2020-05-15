@@ -10,9 +10,10 @@ import UIKit
 import RealityKit
 import ARKit
 
-class ViewController: BaseViewController<Void> {
+class StartViewController: BaseViewController<Void> {
     
-    @IBOutlet var arView: ARView!
+    @IBOutlet private weak var arView: ARView!
+    private weak var startEntity: Entity?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,24 +21,25 @@ class ViewController: BaseViewController<Void> {
             fatalError()
         }
         arView.debugOptions = [.showFeaturePoints, .showStatistics]
-        arView.session.delegate = self
         arView.scene.addAnchor(warp)
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapView(_:)))
         arView.isUserInteractionEnabled = true
         arView.addGestureRecognizer(tapGesture)
+        
+        if let start = warp.findEntity(named: "Start") {
+            self.startEntity = start
+        }
     }
     
     @objc
     private func didTapView(_ sender: UITapGestureRecognizer) {
         let touchView = sender.location(in: arView)
-        if let entity = arView.entity(at: touchView), entity.name == "Start" {
+        let results = arView.hitTest(touchView)
+        if results.contains(where: { $0.entity == startEntity }) {
+            let destination = QuizViewController.build(QuizViewController.Input())
+            destination.modalPresentationStyle = .fullScreen
+            present(destination, animated: true, completion: nil)
         }
-    }
-}
-
-extension ViewController: ARSessionDelegate {
-    func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
-        
     }
 }

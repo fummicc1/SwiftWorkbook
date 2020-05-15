@@ -74,6 +74,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Y5k-Rx-1bg"/>
                     </view>
+                    <connections>
+                        <outlet property="firstLabel" destination="4GT-hb-L3h" id="tAr-Io-YaV"/>
+                        <outlet property="questionTitleLabel" destination="alc-H7-dX1" id="USh-Mu-IXc"/>
+                        <outlet property="secondLabel" destination="kdG-Ho-4ok" id="0R0-M5-s1k"/>
+                        <outlet property="stackView" destination="eB0-r1-7k2" id="xuz-wq-Bcf"/>
+                        <outlet property="thirdLabel" destination="gHM-1P-eBp" id="c6Y-eA-FpL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9TW-f3-VOg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

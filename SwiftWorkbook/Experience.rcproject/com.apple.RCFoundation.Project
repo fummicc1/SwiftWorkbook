@@ -10,7 +10,87 @@
                 "name" : "surface"
               },
               "behaviors" : [
-
+                {
+                  "__content" : [
+                    {
+                      "accessibility" : {
+                        "__content" : [
+                          {
+                            "isEnabled" : false
+                          }
+                        ],
+                        "__version" : 1
+                      },
+                      "actionGroups" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurations" : [
+                                {
+                                  "__content" : [
+                                    {
+                                      "configurationBox" : {
+                                        "configuration" : {
+                                          "animationStyle" : "basic",
+                                          "duration" : 1,
+                                          "emphasisAnimationType" : "spin",
+                                          "iterations" : 1,
+                                          "target" : [
+                                            "83EDB1D3-51A1-4820-A497-038408D2B826"
+                                          ]
+                                        },
+                                        "name" : {
+                                          "type" : "emphasis"
+                                        }
+                                      },
+                                      "identifier" : "C9FEB41E-000F-48E9-94D8-F4A149D383A8",
+                                      "isEnabled" : true
+                                    }
+                                  ],
+                                  "__version" : 1
+                                }
+                              ],
+                              "identifier" : "271BC394-62D0-43FA-9A13-F487D7D95204",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ],
+                      "color" : [
+                        0.49019607901573181,
+                        0.7450980544090271,
+                        0.94901961088180542,
+                        1
+                      ],
+                      "identifier" : "84E27597-7079-40D8-9608-6E5933B83099",
+                      "isEnabled" : true,
+                      "isLooping" : false,
+                      "isModal" : false,
+                      "name" : "ビヘイビア 1",
+                      "triggers" : [
+                        {
+                          "__content" : [
+                            {
+                              "configurationBox" : {
+                                "configuration" : {
+                                  "target" : [
+                                    "83EDB1D3-51A1-4820-A497-038408D2B826"
+                                  ]
+                                },
+                                "name" : "tapTarget"
+                              },
+                              "identifier" : "1E08455D-229A-483E-910A-2363CA6C2088",
+                              "isEnabled" : true
+                            }
+                          ],
+                          "__version" : 1
+                        }
+                      ]
+                    }
+                  ],
+                  "__version" : 3
+                }
               ],
               "gravity" : [
                 0,
@@ -188,22 +268,36 @@
                             "typeName" : "String",
                             "value" : "Start"
                           }
+                        ],
+                        [
+                          "rigidBody-enabled",
+                          {
+                            "typeName" : "Bool",
+                            "value" : true
+                          }
+                        ],
+                        [
+                          "rigidBody-motionType",
+                          {
+                            "typeName" : "REMotionType",
+                            "value" : "static"
+                          }
                         ]
                       ]
                     },
                     "transform" : {
                       "matrix" : [
-                        0.50139784812927246,
+                        0.30000004172325134,
                         0,
                         0,
                         0,
                         0,
-                        0.50139784812927246,
+                        0.30000004172325134,
                         0,
                         0,
                         0,
                         0,
-                        0.50139784812927246,
+                        0.30000004172325134,
                         0,
                         0,
                         0.079999998211860657,
@@ -256,17 +350,17 @@
                     },
                     "transform" : {
                       "matrix" : [
-                        1.0000001192092896,
+                        0.50000005960464478,
                         0,
                         0,
                         0,
                         0,
-                        1.0000001192092896,
+                        0.50000005960464478,
                         0,
                         0,
                         0,
                         0,
-                        1.0000001192092896,
+                        0.50000005960464478,
                         0,
                         0,
                         0,
@@ -294,9 +388,9 @@
               "title" : "Warp",
               "viewTransform" : {
                 "cameraTransform" : [
-                  0.99983423948287964,
-                  3.25962834502036e-09,
-                  -0.018199961632490158,
+                  0.99983435869216919,
+                  3.2596287891095699e-09,
+                  -0.018199963495135307,
                   0,
                   -0.0045813471078872681,
                   0.96779942512512207,
@@ -306,9 +400,9 @@
                   0.2517225444316864,
                   0.96763908863067627,
                   0,
-                  -0.04964447021484375,
-                  0.45594364404678345,
-                  2.1335697174072266,
+                  -0.014999903738498688,
+                  0.16934576630592346,
+                  0.64879685640335083,
                   1
                 ],
                 "sceneTransform" : [
