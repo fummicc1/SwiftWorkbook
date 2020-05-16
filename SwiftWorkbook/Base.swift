@@ -9,11 +9,13 @@
 import Foundation
 import UIKit
 
-class BaseViewController<Input>: UIViewController {
-    
+extension NSObject {
     static var className: String {
         String(describing: self)
     }
+}
+
+class BaseViewController<Input>: UIViewController {
     
     let input: Input!
     

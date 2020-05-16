@@ -37,7 +37,7 @@ class StartViewController: BaseViewController<Void> {
         let touchView = sender.location(in: arView)
         let results = arView.hitTest(touchView)
         if results.contains(where: { $0.entity == startEntity }) {
-            let destination = QuizViewController.build(QuizViewController.Input())
+            let destination = QuizViewController.build(QuizViewController.Input.default())
             destination.modalPresentationStyle = .fullScreen
             present(destination, animated: true, completion: nil)
         }
