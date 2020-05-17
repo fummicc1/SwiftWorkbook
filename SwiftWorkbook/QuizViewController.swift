@@ -20,6 +20,12 @@ class QuizViewController: BaseViewController<QuizViewController.Input> {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    @IBAction private func didTapFindButton() {
+        let destination = FindTargetViewController.build(FindTargetViewController.Input())
+        destination.modalPresentationStyle = .fullScreen
+        self.present(destination, animated: true, completion: nil)
+    }
 }
 
 extension QuizViewController {

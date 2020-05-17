@@ -14,9 +14,23 @@
                     <view key="view" contentMode="scaleToFill" id="RqB-l6-sM6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZgA-5N-KG1">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </arView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="a3s-jV-MFL" firstAttribute="bottom" secondItem="ZgA-5N-KG1" secondAttribute="bottom" id="Awb-Rp-EJD"/>
+                            <constraint firstItem="ZgA-5N-KG1" firstAttribute="top" secondItem="a3s-jV-MFL" secondAttribute="top" id="aXL-QI-gpg"/>
+                            <constraint firstItem="a3s-jV-MFL" firstAttribute="trailing" secondItem="ZgA-5N-KG1" secondAttribute="trailing" id="fmU-SF-uxu"/>
+                            <constraint firstItem="ZgA-5N-KG1" firstAttribute="leading" secondItem="a3s-jV-MFL" secondAttribute="leading" id="hbf-js-nAQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="a3s-jV-MFL"/>
                     </view>
+                    <connections>
+                        <outlet property="arView" destination="ZgA-5N-KG1" id="Zhv-qr-VF5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="166-6u-vHo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

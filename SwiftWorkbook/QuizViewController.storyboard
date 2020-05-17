@@ -42,6 +42,9 @@
                                 <rect key="frame" x="64" y="413.5" width="286" height="41"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                 <state key="normal" title="数字を探す"/>
+                                <connections>
+                                    <action selector="didTapFindButton" destination="FSF-qm-UgY" eventType="touchUpInside" id="pnx-HK-Uv1"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="問題1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alc-H7-dX1">
                                 <rect key="frame" x="40" y="84" width="334" height="41"/>
@@ -76,6 +79,7 @@
                     </view>
                     <connections>
                         <outlet property="firstLabel" destination="4GT-hb-L3h" id="tAr-Io-YaV"/>
+                        <outlet property="questionContentTextView" destination="1nu-WV-RpQ" id="b74-iu-dZS"/>
                         <outlet property="questionTitleLabel" destination="alc-H7-dX1" id="USh-Mu-IXc"/>
                         <outlet property="secondLabel" destination="kdG-Ho-4ok" id="0R0-M5-s1k"/>
                         <outlet property="stackView" destination="eB0-r1-7k2" id="xuz-wq-Bcf"/>
