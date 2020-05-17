@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D302BFFA2470DEA800A99A75 /* MNIST.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D302BFF92470DEA800A99A75 /* MNIST.mlmodel */; };
 		D311A1A2246E558A00FAB8C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D311A1A1246E558A00FAB8C2 /* AppDelegate.swift */; };
 		D311A1A4246E558A00FAB8C2 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D311A1A3246E558A00FAB8C2 /* StartViewController.swift */; };
 		D311A1A6246E558A00FAB8C2 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = D311A1A5246E558A00FAB8C2 /* Experience.rcproject */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D302BFF92470DEA800A99A75 /* MNIST.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MNIST.mlmodel; sourceTree = "<group>"; };
 		D311A1A1246E558A00FAB8C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D311A1A3246E558A00FAB8C2 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		D311A1A5246E558A00FAB8C2 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 		D311A1A0246E558A00FAB8C2 /* SwiftWorkbook */ = {
 			isa = PBXGroup;
 			children = (
+				D302BFF92470DEA800A99A75 /* MNIST.mlmodel */,
 				D311A1AF246E558B00FAB8C2 /* Info.plist */,
 				D311A1A5246E558A00FAB8C2 /* Experience.rcproject */,
 				D34241AD246EDD1600D65603 /* FindTargetViewController.storyboard */,
@@ -151,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D34241AC246EDCFF00D65603 /* FindTargetViewController.swift in Sources */,
+				D302BFFA2470DEA800A99A75 /* MNIST.mlmodel in Sources */,
 				D311A1B4246E644A00FAB8C2 /* Base.swift in Sources */,
 				D31CAD3C246E665300168D3A /* QuizViewController.swift in Sources */,
 				D311A1A4246E558A00FAB8C2 /* StartViewController.swift in Sources */,
