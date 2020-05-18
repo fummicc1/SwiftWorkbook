@@ -13,23 +13,15 @@ import Vision
 
 class FindTargetViewController: BaseViewController<FindTargetViewController.Input> {
 
-    @IBOutlet private weak var arView: ARView!
-    private var request: VNCoreMLRequest?
+    @IBOutlet private weak var arView: ARView!    
+    private let mlManager: VNCoreManager = .init()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        mlManager.delegate = self
         arView.session.delegate = self
         if let model = try? VNCoreMLModel(for: MNIST().model) {
-            request = VNCoreMLRequest(model: model, completionHandler: { request, error in
-                if let error = error {
-                    assert(false, error.localizedDescription)
-                    return
-                }
-                if let bestCategory = request.results?.first as? VNClassificationObservation {
-                    print(bestCategory.confidence)
-                    print(bestCategory.identifier)
-                }
-            })
+            mlManager.setupRequest(model: model)
         }
     }
 }
@@ -42,9 +34,12 @@ extension FindTargetViewController {
 extension FindTargetViewController: ARSessionDelegate {
     func session(_ session: ARSession, didUpdate frame: ARFrame) {
         let pixelBuffer = frame.capturedImage
-        if let request = request {
-            let handler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:])
-            try? handler.perform([request])
-        }
+        mlManager.performRequest(with: pixelBuffer)
+    }
+}
+
+extension FindTargetViewController: VNCoreManagerDelegate {
+    func didDetect(results: [VNClassificationObservation], manager: VNCoreManager) {
+        
     }
 }
