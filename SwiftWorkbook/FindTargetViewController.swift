@@ -13,8 +13,9 @@ import Vision
 
 class FindTargetViewController: BaseViewController<FindTargetViewController.Input> {
 
+    @IBOutlet private weak var predictedNumberLabel: UILabel!
     @IBOutlet private weak var arView: ARView!    
-    private let mlManager: VNCoreManager = .init()
+    private let mlManager: MLManager = .init()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,8 +39,15 @@ extension FindTargetViewController: ARSessionDelegate {
     }
 }
 
-extension FindTargetViewController: VNCoreManagerDelegate {
-    func didDetect(results: [VNClassificationObservation], manager: VNCoreManager) {
-        
+extension FindTargetViewController: MLManagerDelegate {
+    func mlManager(_ manager: MLManager, didDetectResults results: [VNClassificationObservation]) {
+        // TODO: Check precision and recall.
+        guard let desiredResult = results.first else {
+            return
+        }
+        print("Recognized identifier: \(desiredResult.identifier)")
+        DispatchQueue.main.async { [weak self] in
+            self?.predictedNumberLabel.text = String(desiredResult.identifier)
+        }
     }
 }

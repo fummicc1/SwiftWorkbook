@@ -9,14 +9,14 @@
 import Foundation
 import Vision
 
-protocol VNCoreManagerDelegate: AnyObject {
-    func didDetect(results: [VNClassificationObservation], manager: VNCoreManager)
+protocol MLManagerDelegate: AnyObject {
+    func mlManager(_ manager: MLManager, didDetectResults results: [VNClassificationObservation])
 }
 
-class VNCoreManager {
+class MLManager {
     private(set) var request: VNCoreMLRequest?
     
-    weak var delegate: VNCoreManagerDelegate?
+    weak var delegate: MLManagerDelegate?
     
     public func setupRequest(model: VNCoreMLModel) {
         request = VNCoreMLRequest(model: model, completionHandler: { [weak self] request, error in
@@ -29,7 +29,7 @@ class VNCoreManager {
                 return
             }
             if let results = request.results as? [VNClassificationObservation] {
-                self.delegate?.didDetect(results: results, manager: self)
+                self.delegate?.mlManager(self, didDetectResults: results)
             }
         })
     }

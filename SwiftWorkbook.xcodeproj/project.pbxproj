@@ -20,7 +20,8 @@
 		D34241AC246EDCFF00D65603 /* FindTargetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34241AB246EDCFF00D65603 /* FindTargetViewController.swift */; };
 		D34241AE246EDD1600D65603 /* FindTargetViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D34241AD246EDD1600D65603 /* FindTargetViewController.storyboard */; };
 		D399397C247269D300C56D1C /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = D399397B247269D300C56D1C /* Experience.rcproject */; };
-		D3C07C0B2472662A00FFA015 /* VNCoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C07C0A2472662A00FFA015 /* VNCoreManager.swift */; };
+		D3C07C0B2472662A00FFA015 /* MLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C07C0A2472662A00FFA015 /* MLManager.swift */; };
+		D3C4C41024757917007D2FB1 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C4C40F24757917007D2FB1 /* PaddingLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +40,8 @@
 		D34241AB246EDCFF00D65603 /* FindTargetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindTargetViewController.swift; sourceTree = "<group>"; };
 		D34241AD246EDD1600D65603 /* FindTargetViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FindTargetViewController.storyboard; sourceTree = "<group>"; };
 		D399397B247269D300C56D1C /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
-		D3C07C0A2472662A00FFA015 /* VNCoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VNCoreManager.swift; sourceTree = "<group>"; };
+		D3C07C0A2472662A00FFA015 /* MLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLManager.swift; sourceTree = "<group>"; };
+		D3C4C40F24757917007D2FB1 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +72,8 @@
 				D311A1A3246E558A00FAB8C2 /* StartViewController.swift */,
 				D311A1AA246E558B00FAB8C2 /* Assets.xcassets */,
 				D311A1AC246E558B00FAB8C2 /* LaunchScreen.storyboard */,
-				D3C07C0A2472662A00FFA015 /* VNCoreManager.swift */,
+				D3C07C0A2472662A00FFA015 /* MLManager.swift */,
+				D3C4C40F24757917007D2FB1 /* PaddingLabel.swift */,
 			);
 			path = SwiftWorkbook;
 			sourceTree = "<group>";
@@ -162,8 +165,9 @@
 				D31CAD3C246E665300168D3A /* QuizViewController.swift in Sources */,
 				D311A1A4246E558A00FAB8C2 /* StartViewController.swift in Sources */,
 				D399397C247269D300C56D1C /* Experience.rcproject in Sources */,
+				D3C4C41024757917007D2FB1 /* PaddingLabel.swift in Sources */,
 				D311A1A2246E558A00FAB8C2 /* AppDelegate.swift in Sources */,
-				D3C07C0B2472662A00FFA015 /* VNCoreManager.swift in Sources */,
+				D3C07C0B2472662A00FFA015 /* MLManager.swift in Sources */,
 				D33125E224704225007CE75A /* Quiz.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
